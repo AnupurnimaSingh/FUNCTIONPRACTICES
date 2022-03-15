@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palidrom or not</title>
+</head>
+<body>
+    <script>
+    function check_Palindrome(str_enrty)
+    {
+    //Change to lowercase and remove numbers
+    var cstr = str_enrty.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '');
+    var ccount = 0;
+    //check the string is empty or not
+    if(cstr===""){
+        document.write("Nothing Found!");
+        return false;
+    }
+    //check length of string is even or not
+    if ((cstr.length)%2 === 0)
+    {
+        ccount = (cstr.length)/2;
+    }
+    else
+    {
+    //check the length is 1 then its palindrome
+    if (cstr.length === 1) {
+        document.write("Entry is a palindrome."+ "<br>");
+        return true;
+    }
+    else
+    {
+    //if length is odd ignore  middle term
+    ccount = (cstr.length - 1) / 2;
+    }
+    }
+    //loop to check first to last character
+    for (var x = 0; x < ccount; x++)
+    {
+    if (cstr[x] != cstr.slice(-1-x)[0])
+    {
+    document.write("Entry is not a palindrome."+ "<br>");
+        return false;
+    }
+    }
+    document.write("The entry is palindrome."+ "<br>");
+    return true;
+    }
+    check_Palindrome('madam');
+    check_Palindrome('nurse run');
+    check_Palindrome('fox');
+    </script>
+</body>
+</html>
