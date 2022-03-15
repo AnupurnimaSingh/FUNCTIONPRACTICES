@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2 id="x">Hello Anu This side</h2>
+   <button onclick="hideT()">HIDE</button>
+   <button onclick="showT()">SHOW</button>
+</body>
+<script>
+function hideT(){
+    var x=document.getElementsById("x");
+    x[0].style.display="none"
+}
+function showT(){
+    var x=document.getElementsById("x");
+    x[0].style.display="block"
+}
+</script>
+</html>
